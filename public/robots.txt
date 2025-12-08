@@ -1,0 +1,15 @@
+# robots.txt para Italo Vieira Portfolio
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://seudominio.com/sitemap.xml
+
+# Disallow admin areas (se houver)
+Disallow: /admin/
+Disallow: /.nuxt/
+Disallow: /api/
+
+# Crawl-delay (opcional)
+Crawl-delay: 1

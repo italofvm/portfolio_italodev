@@ -6,7 +6,8 @@
     <div class="relative overflow-hidden aspect-video">
       <img 
         :src="project.image" 
-        :alt="project.title" 
+        :alt="`Projeto ${project.title} - ${project.type}`" 
+        loading="lazy"
         class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
       >
       <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/90 to-transparent opacity-60"></div>

@@ -39,7 +39,8 @@
             <div class="relative aspect-video rounded-xl overflow-hidden">
               <img 
                 :src="project.image" 
-                :alt="`Screenshot do projeto ${project.title}`"
+                :alt="`Screenshot do projeto ${project.title} - ${project.type}`"
+                loading="lazy"
                 class="w-full h-full object-cover object-top"
               >
             </div>

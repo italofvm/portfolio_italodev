@@ -17,9 +17,8 @@ interface ScrollAnimateOptions {
   once?: boolean
 }
 
-// defineNuxtPlugin é auto-importado pelo Nuxt (veja .nuxt/imports.d.ts)
 export default defineNuxtPlugin((nuxtApp) => {
-  if (process.client) {
+  if (typeof window !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger)
 
     // Detectar preferência de movimento reduzido
@@ -42,12 +41,12 @@ export default defineNuxtPlugin((nuxtApp) => {
     // Diretiva v-scroll-animate
     nuxtApp.vueApp.directive('scroll-animate', {
       mounted(el: HTMLElement, binding: DirectiveBinding<ScrollAnimateOptions>) {
-        // Validação de entrada
-        if (!el || typeof binding.value !== 'object') {
+        // Validação de entrada (incluindo null check)
+        if (!el || !binding.value || typeof binding.value !== 'object') {
           return
         }
 
-        const options = binding.value || {}
+        const options = binding.value
         const {
           y = 40,
           opacity = 0,
@@ -60,22 +59,26 @@ export default defineNuxtPlugin((nuxtApp) => {
         } = options
 
         // Validação de children para stagger
-        const targets = stagger > 0 && el.children.length > 0 ? el.children : el
+        const targets: HTMLElement | HTMLCollection = stagger > 0 && el.children.length > 0 ? el.children : el
 
-        gsap.from(targets, {
-          y,
-          opacity,
-          duration,
-          delay,
-          stagger,
-          ease,
-          scrollTrigger: {
-            trigger: el,
-            start,
-            once,
-            toggleActions: 'play none none none'
-          }
-        })
+        try {
+          gsap.from(targets, {
+            y,
+            opacity,
+            duration,
+            delay,
+            stagger,
+            ease,
+            scrollTrigger: {
+              trigger: el,
+              start,
+              once,
+              toggleActions: 'play none none none'
+            }
+          })
+        } catch (error) {
+          console.warn('[v-scroll-animate] Falha ao criar animação:', error)
+        }
       },
       // Cleanup para evitar memory leaks
       unmounted(el: HTMLElement) {
