@@ -1,0 +1,31 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Versão alternativa com "IV" -->
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#B13BFF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#471396;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B13BFF;stop-opacity:1" />
+    </linearGradient>
+    
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#B13BFF" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="#090040"/>
+  
+  <!-- Inner glow circle -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#471396" stroke-width="2" opacity="0.3"/>
+  
+  <g filter="url(#shadow)">
+    <!-- Letter "I" -->
+    <rect x="160" y="140" width="60" height="232" rx="8" fill="url(#grad)"/>
+    
+    <!-- Letter "V" -->
+    <path d="M 280 140 L 340 372 L 380 372 L 440 140 L 400 140 L 360 320 L 320 140 Z" fill="url(#grad)"/>
+    
+    <!-- Golden accent -->
+    <circle cx="190" cy="155" r="10" fill="#FFCC00"/>
+  </g>
+</svg>

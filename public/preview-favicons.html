@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preview Favicons - Italo Vieira</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #090040 0%, #1a0066 100%);
+      color: white;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+      background: linear-gradient(135deg, #B13BFF, #FFCC00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #B13BFF;
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(177, 59, 255, 0.3);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #B13BFF;
+      box-shadow: 0 10px 40px rgba(177, 59, 255, 0.3);
+    }
+    
+    .card h2 {
+      margin-bottom: 20px;
+      color: #FFCC00;
+      font-size: 1.3rem;
+    }
+    
+    .preview-box {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 200px;
+    }
+    
+    .sizes {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(177, 59, 255, 0.3);
+    }
+    
+    .size-box {
+      text-align: center;
+    }
+    
+    .size-label {
+      font-size: 0.8rem;
+      color: #B13BFF;
+      margin-bottom: 10px;
+    }
+    
+    .size-preview {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 10px;
+      display: inline-block;
+    }
+    
+    .instructions {
+      background: rgba(255, 204, 0, 0.1);
+      border: 2px solid #FFCC00;
+      border-radius: 15px;
+      padding: 30px;
+      margin-top: 40px;
+    }
+    
+    .instructions h3 {
+      color: #FFCC00;
+      margin-bottom: 15px;
+    }
+    
+    .instructions ol {
+      margin-left: 20px;
+      line-height: 1.8;
+    }
+    
+    .instructions code {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: #B13BFF;
+      font-family: 'Courier New', monospace;
+    }
+    
+    .download-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #B13BFF, #471396);
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(177, 59, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 Preview de Favicons</h1>
+    <p class="subtitle">Escolha o design perfeito para seu portfólio</p>
+    
+    <div class="grid">
+      <!-- Versão 1: Letra I Minimalista -->
+      <div class="card">
+        <h2>Versão 1: "I" Minimalista</h2>
+        <div class="preview-box">
+          <img src="favicon.svg" alt="Favicon 1" style="width: 150px; height: 150px;">
+        </div>
+        <p style="color: #ccc; font-size: 0.9rem; margin-bottom: 15px;">
+          Design clean com letra "I" geométrica, ideal para reconhecimento rápido
+        </p>
+        <div class="sizes">
+          <div class="size-box">
+            <div class="size-label">16x16</div>
+            <div class="size-preview">
+              <img src="favicon.svg" alt="16x16" style="width: 16px; height: 16px;">
+            </div>
+          </div>
+          <div class="size-box">
+            <div class="size-label">32x32</div>
+            <div class="size-preview">
+              <img src="favicon.svg" alt="32x32" style="width: 32px; height: 32px;">
+            </div>
+          </div>
+          <div class="size-box">
+            <div class="size-label">64x64</div>
+            <div class="size-preview">
+              <img src="favicon.svg" alt="64x64" style="width: 64px; height: 64px;">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Versão 2: IV -->
+      <div class="card">
+        <h2>Versão 2: "IV" Completo</h2>
+        <div class="preview-box">
+          <img src="logo-icon.svg" alt="Favicon 2" style="width: 150px; height: 150px;">
+        </div>
+        <p style="color: #ccc; font-size: 0.9rem; margin-bottom: 15px;">
+          Iniciais completas "IV" com círculo, mais personalizado
+        </p>
+        <div class="sizes">
+          <div class="size-box">
+            <div class="size-label">16x16</div>
+            <div class="size-preview">
+              <img src="logo-icon.svg" alt="16x16" style="width: 16px; height: 16px;">
+            </div>
+          </div>
+          <div class="size-box">
+            <div class="size-label">32x32</div>
+            <div class="size-preview">
+              <img src="logo-icon.svg" alt="32x32" style="width: 32px; height: 32px;">
+            </div>
+          </div>
+          <div class="size-box">
+            <div class="size-label">64x64</div>
+            <div class="size-preview">
+              <img src="logo-icon.svg" alt="64x64" style="width: 64px; height: 64px;">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Versão 3: Super Simples -->
+      <div class="card">
+        <h2>Versão 3: Ultra Clean</h2>
+        <div class="preview-box">
+          <img src="favicon-simple.svg" alt="Favicon 3" style="width: 150px; height: 150px;">
+        </div>
+        <p style="color: #ccc; font-size: 0.9rem; margin-bottom: 15px;">
+          Máxima legibilidade em tamanhos pequenos, com animação sutil
+        </p>
+        <div class="sizes">
+          <div class="size-box">
+            <div class="size-label">16x16</div>
+            <div class="size-preview">
+              <img src="favicon-simple.svg" alt="16x16" style="width: 16px; height: 16px;">
+            </div>
+          </div>
+          <div class="size-box">
+            <div class="size-label">32x32</div>
+            <div class="size-preview">
+              <img src="favicon-simple.svg" alt="32x32" style="width: 32px; height: 32px;">
+            </div>
+          </div>
+          <div class="size-box">
+            <div class="size-label">64x64</div>
+            <div class="size-preview">
+              <img src="favicon-simple.svg" alt="64x64" style="width: 64px; height: 64px;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="instructions">
+      <h3>📋 Como Converter para PNG e Usar</h3>
+      <ol>
+        <li>Escolha a versão que mais gostou acima</li>
+        <li>Use uma ferramenta online como <code>cloudconvert.com</code> ou <code>svgtopng.com</code></li>
+        <li>Converta o SVG para PNG nos seguintes tamanhos:
+          <ul style="margin-top: 10px;">
+            <li><code>favicon-16x16.png</code></li>
+            <li><code>favicon-32x32.png</code></li>
+            <li><code>favicon-192x192.png</code> (Android)</li>
+            <li><code>favicon-512x512.png</code> (PWA)</li>
+            <li><code>apple-touch-icon.png</code> (180x180 para iOS)</li>
+          </ul>
+        </li>
+        <li>Ou use o comando ImageMagick (se tiver instalado):
+          <br><code>convert favicon.svg -resize 512x512 favicon-512x512.png</code>
+        </li>
+        <li>Coloque os arquivos na pasta <code>public/</code></li>
+        <li>Atualize o <code>nuxt.config.ts</code> com os links corretos</li>
+      </ol>
+      
+      <h3 style="margin-top: 30px;">🔧 Configuração no Nuxt</h3>
+      <p style="margin-top: 10px; line-height: 1.8;">
+        Adicione no <code>app.head.link</code> do <code>nuxt.config.ts</code>:
+      </p>
+      <pre style="background: rgba(0,0,0,0.3); padding: 15px; border-radius: 8px; margin-top: 10px; overflow-x: auto;">
+link: [
+  { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+  { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+  { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
+  { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+  { rel: 'manifest', href: '/site.webmanifest' }
+]</pre>
+    </div>
+  </div>
+</body>
+</html>
