@@ -1,0 +1,121 @@
+{
+  "otimizacao_copy_e_design": {
+    "opcoes_de_titulo": [
+      {
+        "opcao": 1,
+        "titulo": "Seu Site Pronto em 5 Dias",
+        "justificativa": "Foca na velocidade (benefício tangível) e cria senso de urgência. Número específico aumenta credibilidade.",
+        "palavras": 5
+      },
+      {
+        "opcao": 2,
+        "titulo": "Transforme Visitas em Vendas Hoje",
+        "justificativa": "Foca no resultado final (lucro/conversão). Palavra 'hoje' cria urgência imediata.",
+        "palavras": 5
+      },
+      {
+        "opcao": 3,
+        "titulo": "Landing Page Que Vende Sozinha",
+        "justificativa": "Promete automação e facilidade. Apela para o desejo de passividade no negócio.",
+        "palavras": 5
+      }
+    ],
+    "subtexto_otimizado": {
+      "texto_introducao": "Receba uma proposta personalizada em minutos, sem custo e sem compromisso:",
+      "bullet_points": [
+        {
+          "icone": "⚡",
+          "titulo": "Proposta em 24h",
+          "descricao": "Resposta rápida com preço e prazo definidos"
+        },
+        {
+          "icone": "🎯",
+          "titulo": "Entrega em 3-5 dias",
+          "descricao": "Seu site no ar mais rápido que a concorrência"
+        },
+        {
+          "icone": "✅",
+          "titulo": "Sem compromisso",
+          "descricao": "Orçamento gratuito, você decide se aprova"
+        }
+      ],
+      "cta_final": "Preencha o formulário e receba sua proposta direto no WhatsApp →"
+    },
+    "melhorias_de_design": [
+      {
+        "melhoria": 1,
+        "titulo": "Adicionar Badge de Prova Social",
+        "descricao": "Incluir um badge flutuante acima do título com '50+ Sites Entregues' ou '4.9★ Avaliação Média'",
+        "justificativa": "Prova social aumenta confiança e reduz objeções. Badges visuais chamam atenção sem poluir.",
+        "implementacao": "Badge pequeno com ícone de estrela ou número, posicionado acima do título principal",
+        "impacto_esperado": "+15-25% na taxa de conversão"
+      },
+      {
+        "melhoria": 2,
+        "titulo": "Ícones Coloridos nos Bullet Points",
+        "descricao": "Substituir emojis por ícones SVG personalizados nas cores do tema (roxo/amarelo)",
+        "justificativa": "Ícones profissionais aumentam percepção de qualidade. Cores do tema criam coesão visual.",
+        "implementacao": "Ícones de 24x24px com gradiente roxo→amarelo, alinhados à esquerda dos textos",
+        "impacto_esperado": "Melhora escaneabilidade e tempo de permanência na seção"
+      },
+      {
+        "melhoria": 3,
+        "titulo": "Elemento de Urgência Sutil",
+        "descricao": "Adicionar contador de 'Vagas Disponíveis Esta Semana: 3' ou 'Última proposta enviada há 2h'",
+        "justificativa": "Escassez e prova de atividade recente criam FOMO (Fear of Missing Out) sem ser agressivo.",
+        "implementacao": "Texto pequeno com ícone de relógio, abaixo dos bullet points, cor cinza claro",
+        "impacto_esperado": "+10-20% na urgência de preenchimento do formulário"
+      }
+    ],
+    "variacao_alternativa_agressiva": {
+      "titulo": "Garanta Seu Desconto de Lançamento",
+      "subtexto": "Primeiros 10 clientes do mês ganham 20% OFF + domínio grátis por 1 ano",
+      "bullet_points": [
+        "💰 Economia de R$ 400+ no primeiro ano",
+        "🚀 Prioridade na fila de desenvolvimento",
+        "🎁 Bônus: 3 meses de suporte grátis"
+      ],
+      "nota": "Usar apenas se houver promoção real. Nunca mentir sobre escassez."
+    },
+    "testes_ab_sugeridos": [
+      {
+        "teste": "Título A vs B",
+        "variante_a": "Seu Site Pronto em 5 Dias",
+        "variante_b": "Transforme Visitas em Vendas Hoje",
+        "metrica": "Taxa de preenchimento do formulário",
+        "duracao_minima": "100 conversões por variante"
+      },
+      {
+        "teste": "Com vs Sem Badge de Prova Social",
+        "variante_a": "Seção com badge '50+ Sites Entregues'",
+        "variante_b": "Seção sem badge",
+        "metrica": "Taxa de conversão e tempo na página",
+        "duracao_minima": "200 visitantes por variante"
+      }
+    ]
+  },
+  "implementacao_tecnica": {
+    "estrutura_html_sugerida": {
+      "badge_prova_social": "<div class='inline-flex items-center gap-2 px-4 py-2 bg-cta/10 border border-cta/30 rounded-full mb-4'>\n  <svg>...</svg>\n  <span class='text-cta font-bold'>50+ Sites Entregues</span>\n</div>",
+      "bullet_point": "<div class='flex items-start gap-4 p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-all'>\n  <div class='w-12 h-12 rounded-full bg-gradient-to-br from-accent to-cta flex items-center justify-center flex-shrink-0'>\n    <svg class='w-6 h-6 text-white'>...</svg>\n  </div>\n  <div>\n    <h4 class='font-bold text-white mb-1'>Título</h4>\n    <p class='text-gray-400 text-sm'>Descrição</p>\n  </div>\n</div>",
+      "elemento_urgencia": "<div class='flex items-center gap-2 text-sm text-gray-400 mt-6'>\n  <svg class='w-4 h-4 text-cta animate-pulse'>...</svg>\n  <span>Última proposta enviada há <strong class='text-white'>2 horas</strong></span>\n</div>"
+    },
+    "animacoes_sugeridas": [
+      "Badge de prova social com pulse suave",
+      "Bullet points com fadeInUp stagger",
+      "Ícones com scale no hover",
+      "Contador de urgência com fade-in após 3s"
+    ]
+  },
+  "metricas_de_sucesso": {
+    "baseline_atual": {
+      "taxa_conversao_estimada": "2-3%",
+      "tempo_medio_na_secao": "15-20 segundos"
+    },
+    "metas_pos_otimizacao": {
+      "taxa_conversao_alvo": "4-6%",
+      "tempo_medio_na_secao": "25-35 segundos",
+      "reducao_taxa_rejeicao": "15-20%"
+    }
+  }
+}

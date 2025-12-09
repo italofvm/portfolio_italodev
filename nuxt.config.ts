@@ -2,22 +2,25 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: { enabled: true },
-    
+
     modules: ['@nuxtjs/tailwindcss'],
-    
+
     css: [
         '~/assets/css/animations.css',
         '~/assets/css/simple-animations.css'
     ],
-    
+
     // Runtime Config - Variáveis de ambiente type-safe
+    // Runtime Config - Variáveis de ambiente
+    // Valores padrão funcionais, sobrescritos por NUXT_PUBLIC_* no .env
     runtimeConfig: {
         public: {
-            // Use NUXT_PUBLIC_WHATSAPP_NUMBER no .env
-            whatsappNumber: process.env.NUXT_PUBLIC_WHATSAPP_NUMBER || '5511999999999'
+            whatsappNumber: '5511999999999',
+            contactEmail: 'italo_dev@email.com',
+            siteUrl: 'https://italovdev.vercel.app'
         }
     },
-    
+
     app: {
         head: {
             htmlAttrs: {
@@ -27,7 +30,7 @@ export default defineNuxtConfig({
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { hid: 'description', name: 'description', content: 'Desenvolvedor freelancer especializado em landing pages e sites de alta conversão. Projetos rápidos, modernos e otimizados para SEO.' },
+                { name: 'description', content: 'Desenvolvedor freelancer especializado em landing pages e sites de alta conversão. Projetos rápidos, modernos e otimizados para SEO.' },
                 { name: 'theme-color', content: '#090040' },
                 { name: 'format-detection', content: 'telephone=no' }
             ],
@@ -62,14 +65,7 @@ export default defineNuxtConfig({
     vite: {
         build: {
             cssCodeSplit: true,
-            chunkSizeWarningLimit: 1000,
-            rollupOptions: {
-                output: {
-                    manualChunks: {
-                        gsap: ['gsap']
-                    }
-                }
-            }
+            chunkSizeWarningLimit: 1000
         }
     }
 })

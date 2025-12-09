@@ -122,7 +122,8 @@
 import { ref, reactive } from 'vue'
 
 const config = useRuntimeConfig()
-const PUBLIC_WHATSAPP_NUMBER = config.public.PUBLIC_WHATSAPP_NUMBER
+// Garantir que whatsappNumber seja sempre uma string
+const whatsappNumber = String(config.public.whatsappNumber || '5511999999999')
 
 const loading = ref(false)
 const statusMessage = ref(null)
@@ -246,7 +247,7 @@ Gostaria de: *${form.objective}*.
 *Mensagem:* ${safeMessage || 'Sem mensagem adicional.'}`
 
     const encoded = encodeURIComponent(template)
-    const cleanNumber = PUBLIC_WHATSAPP_NUMBER.replace(/\D/g, '')
+    const cleanNumber = whatsappNumber.replace(/\D/g, '')
     const url = `https://wa.me/${cleanNumber}?text=${encoded}`
     
     // Tentar abrir popup

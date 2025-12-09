@@ -7,7 +7,7 @@ export const projects = [
         type: 'Simples',
         tags: ['Rápido', 'Mobile First', 'Conversão'],
         image: '/assets/barber-simples.png', // Placeholder
-        demoLink: 'https://www.barbersimple.vercel.app/'
+        demoLink: 'https://barbersimple.vercel.app/'
     },
     {
         id: 2,
@@ -17,7 +17,7 @@ export const projects = [
         type: 'Profissional',
         tags: ['Design Premium', 'Galeria', 'SEO'],
         image: '/assets/barber-pro.png',
-        demoLink: 'https://www.barbeariaelite.vercel.app/'
+        demoLink: 'https://barbeariaelite.vercel.app/'
     },
     {
         id: 3,
@@ -47,7 +47,7 @@ export const projects = [
         type: 'Simples',
         tags: ['Leads', 'Elegância', 'Direto'],
         image: '/assets/belleza-natural.png',
-        demoLink: 'https://www.bellezanatural.vercel.app/'
+        demoLink: 'https://bellezanatural.vercel.app/'
     },
     {
         id: 6,
@@ -57,6 +57,6 @@ export const projects = [
         type: 'Profissional',
         tags: ['Institucional', 'Blog', 'Completo'],
         image: '/assets/lumiere-spa.png',
-        demoLink: 'https://www.lumierespar.vercel.app'
+        demoLink: 'https://lumierespar.vercel.app'
     }
 ]
