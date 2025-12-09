@@ -8,51 +8,28 @@ export default defineEventHandler((event) => {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Página Principal -->
+  <!-- 
+    SITEMAP OTIMIZADO PARA SITE ONE-PAGE
+    
+    ⚠️ IMPORTANTE: URLs com âncoras (#) NÃO são indexáveis pelo Google
+    
+    Para site one-page, incluímos apenas a página principal.
+    O Google indexará todo o conteúdo da página automaticamente.
+    
+    Se você criar páginas separadas no futuro (/servicos, /portfolio, etc.),
+    adicione-as aqui sem o símbolo #.
+  -->
+
+  <!-- Página Principal (One-Page com todo o conteúdo) -->
   <url>
     <loc>https://italovdev.vercel.app/</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- Seções Importantes (âncoras indexáveis) -->
-  <url>
-    <loc>https://italovdev.vercel.app/#servicos</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://italovdev.vercel.app/#portfolio</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://italovdev.vercel.app/#depoimentos</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://italovdev.vercel.app/#faq</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://italovdev.vercel.app/#contato</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
 
 </urlset>`

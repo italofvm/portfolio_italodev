@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- 
+    SITEMAP PARA SITE MULTI-PAGE (FUTURO)
+    
+    Use este template quando criar páginas separadas.
+    
+    COMO USAR:
+    1. Crie as páginas: /servicos, /portfolio, /contato, etc.
+    2. Copie este conteúdo para server/routes/sitemap.xml.ts
+    3. Remova as URLs que não existem
+    4. Faça deploy
+  -->
+
+  <!-- Página Principal -->
+  <url>
+    <loc>https://italovdev.vercel.app/</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Página de Serviços -->
+  <url>
+    <loc>https://italovdev.vercel.app/servicos</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Página de Portfólio -->
+  <url>
+    <loc>https://italovdev.vercel.app/portfolio</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Projetos Individuais (exemplo) -->
+  <url>
+    <loc>https://italovdev.vercel.app/portfolio/barbearia-viking</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://italovdev.vercel.app/portfolio/the-grill</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Página de Depoimentos -->
+  <url>
+    <loc>https://italovdev.vercel.app/depoimentos</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Página de FAQ -->
+  <url>
+    <loc>https://italovdev.vercel.app/faq</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Página de Contato -->
+  <url>
+    <loc>https://italovdev.vercel.app/contato</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog (se criar no futuro) -->
+  <url>
+    <loc>https://italovdev.vercel.app/blog</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Posts do Blog (exemplo) -->
+  <url>
+    <loc>https://italovdev.vercel.app/blog/como-criar-landing-page</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://italovdev.vercel.app/blog/otimizacao-seo</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Sobre -->
+  <url>
+    <loc>https://italovdev.vercel.app/sobre</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Política de Privacidade -->
+  <url>
+    <loc>https://italovdev.vercel.app/privacidade</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Termos de Uso -->
+  <url>
+    <loc>https://italovdev.vercel.app/termos</loc>
+    <lastmod>2025-12-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
