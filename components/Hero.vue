@@ -1,9 +1,9 @@
 <template>
-  <section class="hero-section relative bg-primary-dark pt-32 pb-20 overflow-hidden">
+  <section class="relative bg-primary-dark pt-32 pb-20 overflow-hidden">
     <!-- Background glow -->
     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-      <div class="hero-glow-1 absolute top-20 left-10 w-72 h-72 bg-accent/30 rounded-full blur-3xl mix-blend-screen animate-pulse"></div>
-      <div class="hero-glow-2 absolute top-40 right-10 w-96 h-96 bg-highlight/20 rounded-full blur-3xl mix-blend-screen"></div>
+      <div class="absolute top-20 left-10 w-72 h-72 bg-accent/30 rounded-full blur-3xl mix-blend-screen animate-pulse"></div>
+      <div class="absolute top-40 right-10 w-96 h-96 bg-highlight/20 rounded-full blur-3xl mix-blend-screen"></div>
     </div>
 
     <div class="container mx-auto px-4 relative z-10 text-center">
@@ -35,15 +35,40 @@
 <script setup>
 import { onMounted } from 'vue'
 
-onMounted(() => {
-  if (process.client) {
-    const { initHeroAnimations } = useAnimations()
-    initHeroAnimations()
-  }
-})
+// Animações desabilitadas temporariamente
+// onMounted(() => {
+//   if (typeof window !== 'undefined') {
+//     const { initHeroAnimations } = useAnimations()
+//     initHeroAnimations()
+//   }
+// })
 </script>
 
 <style scoped>
+/* Garantir visibilidade */
+.hero-badge,
+.hero-title,
+.hero-subtitle,
+.hero-buttons {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-badge { animation-delay: 0.1s; }
+.hero-title { animation-delay: 0.2s; }
+.hero-subtitle { animation-delay: 0.4s; }
+.hero-buttons { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .cta-button {
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }

@@ -2,12 +2,19 @@
 export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: { enabled: true },
-    modules: ['@nuxtjs/tailwindcss'],
-    css: ['~/assets/css/animations.css'],
     
+    modules: ['@nuxtjs/tailwindcss'],
+    
+    css: [
+        '~/assets/css/animations.css',
+        '~/assets/css/simple-animations.css'
+    ],
+    
+    // Runtime Config - Variáveis de ambiente type-safe
     runtimeConfig: {
         public: {
-            PUBLIC_WHATSAPP_NUMBER: (process.env.PUBLIC_WHATSAPP_NUMBER || '5511999999999') as string
+            // Use NUXT_PUBLIC_WHATSAPP_NUMBER no .env
+            whatsappNumber: process.env.NUXT_PUBLIC_WHATSAPP_NUMBER || '5511999999999'
         }
     },
     
@@ -25,9 +32,11 @@ export default defineNuxtConfig({
                 { name: 'format-detection', content: 'telephone=no' }
             ],
             link: [
-                { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
-                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-                { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
+                // SVG favicon (navegadores modernos)
+                { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
+                // Adicione outros formatos quando converter os SVGs para PNG
+                // { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+                // { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
             ]
         }
     },
@@ -42,13 +51,18 @@ export default defineNuxtConfig({
     // Nitro optimizations
     nitro: {
         compressPublicAssets: true,
-        minify: true
+        minify: true,
+        prerender: {
+            crawlLinks: true,
+            routes: ['/']
+        }
     },
 
     // Build optimizations
     vite: {
         build: {
             cssCodeSplit: true,
+            chunkSizeWarningLimit: 1000,
             rollupOptions: {
                 output: {
                     manualChunks: {

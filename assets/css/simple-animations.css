@@ -1,0 +1,52 @@
+/* Animações CSS Simples e Confiáveis */
+
+/* Garantir que tudo seja visível por padrão */
+* {
+  opacity: 1 !important;
+}
+
+/* Animação suave de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplicar animação apenas em elementos específicos */
+.animate-on-scroll {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Hover effects suaves */
+.service-card,
+.project-card,
+.testimonial-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transições suaves para todos os links e botões */
+a, button {
+  transition: all 0.3s ease;
+}

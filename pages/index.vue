@@ -253,34 +253,32 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
 })
 
-// Inicializar animações
-onMounted(() => {
-  if (typeof window !== 'undefined') {
-    // Importar dinamicamente para evitar SSR issues
-    nextTick(() => {
-      const { 
-        initServiceCardsAnimation,
-        initProjectCardsAnimation,
-        initSectionTitles,
-        initTestimonials,
-        initFaqItems,
-        initContactSection,
-        initFooter
-      } = useAnimations()
+// Inicializar animações (desabilitado temporariamente para debug)
+// onMounted(() => {
+//   if (typeof window !== 'undefined') {
+//     nextTick(() => {
+//       const { 
+//         initServiceCardsAnimation,
+//         initProjectCardsAnimation,
+//         initSectionTitles,
+//         initTestimonials,
+//         initFaqItems,
+//         initContactSection,
+//         initFooter
+//       } = useAnimations()
 
-      // Pequeno delay para garantir que o DOM está pronto
-      setTimeout(() => {
-        initSectionTitles()
-        initServiceCardsAnimation()
-        initProjectCardsAnimation()
-        initTestimonials()
-        initFaqItems()
-        initContactSection()
-        initFooter()
-      }, 100)
-    })
-  }
-})
+//       setTimeout(() => {
+//         initSectionTitles()
+//         initServiceCardsAnimation()
+//         initProjectCardsAnimation()
+//         initTestimonials()
+//         initFaqItems()
+//         initContactSection()
+//         initFooter()
+//       }, 100)
+//     })
+//   }
+// })
 
 // SEO Otimizado
 useHead({
@@ -330,4 +328,47 @@ useHead({
   opacity: 0;
   transform: translateY(-10px);
 }
+
+/* Animações CSS simples para garantir visibilidade */
+.section-title,
+.section-subtitle,
+.service-card,
+.project-card,
+.testimonial-card,
+.faq-item,
+.contact-title,
+.contact-subtitle,
+.contact-info,
+.contact-form,
+.footer-content {
+  animation: fadeInUp 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stagger para cards */
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.3s; }
 </style>
