@@ -32,7 +32,8 @@ export default defineNuxtConfig({
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
                 { name: 'description', content: 'Desenvolvedor freelancer especializado em landing pages e sites de alta conversão. Projetos rápidos, modernos e otimizados para SEO.' },
                 { name: 'theme-color', content: '#090040' },
-                { name: 'format-detection', content: 'telephone=no' }
+                { name: 'format-detection', content: 'telephone=no' },
+                { name: 'google-site-verification', content: 'google9526d7b2a7b539bd' }
             ],
             link: [
                 // SVG favicon (navegadores modernos)
