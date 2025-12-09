@@ -3,7 +3,7 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: { enabled: true },
 
-    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
+    modules: ['@nuxtjs/tailwindcss'],
 
     css: [
         '~/assets/css/optimized-animations.css'
@@ -78,24 +78,6 @@ export default defineNuxtConfig({
         payloadExtraction: true,
         renderJsonPayloads: true,
         viewTransition: true
-    },
-
-    // Sitemap Configuration
-    sitemap: {
-        hostname: 'https://italovdev.vercel.app',
-        gzip: true,
-        defaults: {
-            changefreq: 'weekly',
-            priority: 0.8
-        },
-        urls: [
-            { loc: '/', priority: 1.0, changefreq: 'weekly' },
-            { loc: '/#servicos', priority: 0.8, changefreq: 'monthly' },
-            { loc: '/#portfolio', priority: 0.9, changefreq: 'weekly' },
-            { loc: '/#depoimentos', priority: 0.7, changefreq: 'monthly' },
-            { loc: '/#faq', priority: 0.6, changefreq: 'monthly' },
-            { loc: '/#contato', priority: 0.8, changefreq: 'monthly' }
-        ]
     },
 
     // Nitro optimizations
