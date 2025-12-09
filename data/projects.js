@@ -6,7 +6,7 @@ export const projects = [
         niche: 'Barbearia',
         type: 'Simples',
         tags: ['Rápido', 'Mobile First', 'Conversão'],
-        image: '/assets/barber-simples.png', // Placeholder
+        image: 'barber-simples',
         demoLink: 'https://barbersimple.vercel.app/'
     },
     {
@@ -16,7 +16,7 @@ export const projects = [
         niche: 'Barbearia',
         type: 'Profissional',
         tags: ['Design Premium', 'Galeria', 'SEO'],
-        image: '/assets/barber-pro.png',
+        image: 'barber-pro',
         demoLink: 'https://barbeariaelite.vercel.app/'
     },
     {
@@ -26,7 +26,7 @@ export const projects = [
         niche: 'Hamburgueria',
         type: 'Simples',
         tags: ['Performance', 'Cardápio', 'CTA'],
-        image: '/assets/burger-star.png',
+        image: 'burger-star',
         demoLink: 'https://burgerstar.vercel.app/'
     },
     {
@@ -36,7 +36,7 @@ export const projects = [
         niche: 'Hamburgueria',
         type: 'Profissional',
         tags: ['Automatizado', 'Pedidos', 'Multilojas'],
-        image: '/assets/the-grill.png',
+        image: 'the-grill',
         demoLink: 'https://thegrill-nu.vercel.app/'
     },
     {
@@ -46,7 +46,7 @@ export const projects = [
         niche: 'Estética',
         type: 'Simples',
         tags: ['Leads', 'Elegância', 'Direto'],
-        image: '/assets/belleza-natural.png',
+        image: 'belleza-natural',
         demoLink: 'https://bellezanatural.vercel.app/'
     },
     {
@@ -56,7 +56,7 @@ export const projects = [
         niche: 'Estética',
         type: 'Profissional',
         tags: ['Institucional', 'Blog', 'Completo'],
-        image: '/assets/lumiere-spa.png',
+        image: 'lumiere-spa',
         demoLink: 'https://lumierespar.vercel.app'
     }
 ]

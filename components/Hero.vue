@@ -16,7 +16,7 @@
         <span class="text-transparent bg-clip-text bg-gradient-to-r from-highlight to-accent">Sites de Alta Conversão</span>
       </h1>
       
-      <p class="hero-subtitle text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+      <p class="hero-subtitle text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed">
         Criação de Landing Pages, Portfólios e Sistemas Web rápidos, modernos e otimizados para vender mais.
       </p>
       

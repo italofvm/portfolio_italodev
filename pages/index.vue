@@ -73,7 +73,9 @@
       </Transition>
     </nav>
 
-    <Hero />
+    <!-- Main Content -->
+    <main id="main-content">
+      <Hero />
 
     <!-- Services Section -->
     <section id="servicos" class="section-animate py-20 bg-primary-dark relative" aria-labelledby="services-heading">
@@ -82,7 +84,7 @@
           <h2 id="services-heading" class="section-title text-3xl md:text-5xl font-bold text-white mb-4">
             Como posso ajudar?
           </h2>
-          <p class="section-subtitle text-gray-400 max-w-2xl mx-auto">
+          <p class="section-subtitle text-gray-300 max-w-2xl mx-auto">
             Soluções completas para colocar seu negócio na internet com profissionalismo.
           </p>
         </div>
@@ -114,7 +116,7 @@
           <h2 id="portfolio-heading" class="section-title text-3xl md:text-5xl font-bold text-white mt-2 mb-4">
             Projetos Recentes
           </h2>
-          <p class="section-subtitle text-gray-400 max-w-2xl mx-auto">
+          <p class="section-subtitle text-gray-300 max-w-2xl mx-auto">
             Confira alguns trabalhos desenvolvidos para diferentes nichos de mercado.
           </p>
         </div>
@@ -274,6 +276,7 @@
         </div>
       </div>
     </section>
+    </main>
 
     <TheFooter />
     <WhatsAppButton />
@@ -362,8 +365,8 @@ const faqs = [
 ]
 
 const contactInfo = {
-  email: 'italo_dev@email.com',
-  phone: '(11) 99999-9999'
+  email: 'em construção',
+  phone: '(11) 98602-1032'
 }
 
 // Métodos otimizados
@@ -561,22 +564,7 @@ useHead({
 .contact-info { animation: fadeInUp 0.8s ease-out 0.3s forwards; opacity: 0; }
 .contact-form { animation: fadeInUp 0.8s ease-out 0.4s forwards; opacity: 0; }
 
-/* Performance: usar will-change apenas durante animação */
-.section-animate,
-.section-title,
-.section-subtitle,
-.service-card,
-.project-card,
-.testimonial-card,
-.faq-item,
-.contact-title,
-.contact-subtitle,
-.contact-info,
-.contact-form {
-  will-change: opacity, transform;
-}
-
-/* Remover will-change após animação */
+/* Performance: Remover will-change - deixar o browser otimizar */
 @media (prefers-reduced-motion: no-preference) {
   .section-animate,
   .section-title,

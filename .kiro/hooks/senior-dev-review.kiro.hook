@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "name": "Senior Developer Code Review",
+  "description": "Automatically reviews edited files as a Senior Developer and Software Architect, checking for: clean architecture, security issues, scalability concerns, SOLID principles, performance optimization, proper documentation, and enterprise-level best practices. Provides actionable feedback and suggests improvements following the C.O.R.P.O methodology.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.vue",
+      "**/*.ts",
+      "**/*.js",
+      "**/*.md",
+      "nuxt.config.ts",
+      "tailwind.config.cjs",
+      "package.json"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Como Desenvolvedor Sênior e Arquiteto de Software, revise o arquivo editado seguindo o modelo C.O.R.P.O:\n\n**CONTEXTO**: Analise o arquivo no contexto do projeto Nuxt.js\n**OBJETIVO**: Identificar problemas de arquitetura, segurança, performance e qualidade\n**REQUISITOS**: Verificar se atende requisitos funcionais e não funcionais\n**PROCESSO**: Sugerir melhorias por fase se necessário\n**ORIENTAÇÃO**: Fornecer feedback claro, justificado e aplicável\n\nVerifique:\n- Arquitetura limpa e separação de responsabilidades\n- Segurança (validação, sanitização, autenticação)\n- Performance e otimização\n- Princípios SOLID, DRY, KISS\n- Tratamento de erros robusto\n- Código limpo e legível\n- Escalabilidade\n- Documentação adequada\n- Boas práticas de Vue/Nuxt\n- Acessibilidade e UX\n\nSe encontrar problemas, explique o impacto e sugira a solução correta. Se estiver excelente, confirme e elogie os pontos fortes. Sempre em português."
+  }
+}

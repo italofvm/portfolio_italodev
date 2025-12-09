@@ -6,18 +6,18 @@ export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss'],
 
     css: [
-        '~/assets/css/animations.css',
-        '~/assets/css/simple-animations.css'
+        '~/assets/css/optimized-animations.css'
     ],
 
-    // Runtime Config - Variáveis de ambiente type-safe
     // Runtime Config - Variáveis de ambiente
-    // Valores padrão funcionais, sobrescritos por NUXT_PUBLIC_* no .env
+    // IMPORTANTE: Configure os valores reais no arquivo .env
+    // Exemplo: NUXT_PUBLIC_WHATSAPP_NUMBER=5511986021032
     runtimeConfig: {
         public: {
-            whatsappNumber: '5511999999999',
-            contactEmail: 'italo_dev@email.com',
-            siteUrl: 'https://italovdev.vercel.app'
+            // Valores padrão vazios - SEMPRE configure no .env
+            whatsappNumber: process.env.NUXT_PUBLIC_WHATSAPP_NUMBER || '',
+            contactEmail: process.env.NUXT_PUBLIC_CONTACT_EMAIL || '',
+            siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://italovdev.vercel.app'
         }
     },
 
@@ -36,10 +36,9 @@ export default defineNuxtConfig({
             ],
             link: [
                 // SVG favicon (navegadores modernos)
-                { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
-                // Adicione outros formatos quando converter os SVGs para PNG
-                // { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
-                // { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }
+                { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+                // Preconnect para recursos externos (se houver)
+                { rel: 'preconnect', href: 'https://fonts.googleapis.com', crossorigin: 'anonymous' }
             ]
         }
     },
@@ -65,7 +64,20 @@ export default defineNuxtConfig({
     vite: {
         build: {
             cssCodeSplit: true,
-            chunkSizeWarningLimit: 1000
+            chunkSizeWarningLimit: 1000,
+            rollupOptions: {
+                output: {
+                    manualChunks: (id) => {
+                        // Separar componentes pesados em chunks próprios
+                        if (id.includes('ProjectModal.vue')) return 'project-modal'
+                        if (id.includes('ContactForm.vue')) return 'contact-form'
+                        // Vendor chunk para node_modules
+                        if (id.includes('node_modules')) {
+                            return 'vendor'
+                        }
+                    }
+                }
+            }
         }
     }
 })

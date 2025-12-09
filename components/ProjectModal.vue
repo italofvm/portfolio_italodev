@@ -37,12 +37,30 @@
           <div v-if="project" class="p-6 space-y-6">
             <!-- Image -->
             <div class="relative aspect-video rounded-xl overflow-hidden">
-              <img 
-                :src="project.image" 
-                :alt="`Screenshot do projeto ${project.title} - ${project.type}`"
-                loading="lazy"
-                class="w-full h-full object-cover object-top"
-              >
+              <picture>
+                <source 
+                  media="(max-width: 640px)" 
+                  :srcset="`/assets/optimized/${project.image}-mobile.webp`"
+                  type="image/webp"
+                >
+                <source 
+                  media="(max-width: 1024px)" 
+                  :srcset="`/assets/optimized/${project.image}-tablet.webp`"
+                  type="image/webp"
+                >
+                <source 
+                  :srcset="`/assets/optimized/${project.image}-desktop.webp`"
+                  type="image/webp"
+                >
+                <img 
+                  :src="`/assets/optimized/${project.image}.webp`"
+                  :alt="`Screenshot do projeto ${project.title} - ${project.type}`"
+                  loading="lazy"
+                  width="1024"
+                  height="576"
+                  class="w-full h-full object-cover object-top"
+                >
+              </picture>
             </div>
 
             <!-- Info Grid -->

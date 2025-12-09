@@ -4,12 +4,30 @@
     class="project-card group cursor-pointer bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cta/50 transition-all duration-300 flex flex-col h-full"
   >
     <div class="relative overflow-hidden aspect-video">
-      <img 
-        :src="project.image" 
-        :alt="`Projeto ${project.title} - ${project.type}`" 
-        loading="lazy"
-        class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
-      >
+      <picture>
+        <source 
+          media="(max-width: 640px)" 
+          :srcset="`/assets/optimized/${project.image}-mobile.webp`"
+          type="image/webp"
+        >
+        <source 
+          media="(max-width: 1024px)" 
+          :srcset="`/assets/optimized/${project.image}-tablet.webp`"
+          type="image/webp"
+        >
+        <source 
+          :srcset="`/assets/optimized/${project.image}-desktop.webp`"
+          type="image/webp"
+        >
+        <img 
+          :src="`/assets/optimized/${project.image}.webp`"
+          :alt="`Projeto ${project.title} - ${project.type}`" 
+          loading="lazy"
+          width="640"
+          height="360"
+          class="w-full h-full object-cover object-top transform group-hover:scale-110 transition-transform duration-500"
+        >
+      </picture>
       <div class="absolute inset-0 bg-gradient-to-t from-primary-dark/90 to-transparent opacity-60"></div>
       
       <div class="absolute bottom-4 left-4">
@@ -23,7 +41,7 @@
       <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cta transition-colors">
         {{ project.title }}
       </h3>
-      <p class="text-gray-400 text-sm mb-4 line-clamp-2 flex-grow">
+      <p class="text-gray-300 text-sm mb-4 line-clamp-2 flex-grow">
         {{ project.description }}
       </p>
       

@@ -1,37 +1,40 @@
-# Dependencies
-node_modules
-
-# Nuxt
-.nuxt
+# Nuxt dev/build outputs
 .output
+.data
+.nuxt
+.nitro
+.cache
 dist
 
-# Kiro IDE
-.kiro
-
-# Documentation (exceto README.md)
-docs/
-
-# Markdown files (exceto README.md)
-*.md
-!README.md
+# Node dependencies
+node_modules
 
 # Logs
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Environment
-.env
-.env.local
-.env.*.local
-!.env.example
+lerna-debug.log*
+.pnpm-debug.log*
 
 # OS
 .DS_Store
-Thumbs.db
-
-# IDE
-.vscode
+.fleet
 .idea
+
+# Vim
+*.swp
+*.swo
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Vercel
+.vercel
+.vercel.json
+
+# TypeScript
+*.tsbuildinfo

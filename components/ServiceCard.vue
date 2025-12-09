@@ -9,7 +9,7 @@
       </slot>
     </div>
     <h3 class="text-2xl font-bold text-white mb-3">{{ title }}</h3>
-    <p class="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors">
+    <p class="text-gray-300 leading-relaxed group-hover:text-gray-200 transition-colors">
       {{ description }}
     </p>
   </div>
