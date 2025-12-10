@@ -80,13 +80,24 @@ export default defineNuxtConfig({
         viewTransition: true
     },
 
-    // Nitro optimizations
+    // Nitro optimizations + Security Headers
     nitro: {
         compressPublicAssets: true,
         minify: true,
         prerender: {
             crawlLinks: true,
             routes: ['/']
+        },
+        routeRules: {
+            '/**': {
+                headers: {
+                    'X-Frame-Options': 'DENY',
+                    'X-Content-Type-Options': 'nosniff',
+                    'Referrer-Policy': 'strict-origin-when-cross-origin',
+                    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+                    'X-XSS-Protection': '1; mode=block'
+                }
+            }
         }
     },
 
