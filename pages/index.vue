@@ -366,7 +366,7 @@ const faqs = [
 
 const contactInfo = {
   email: 'em construção',
-  phone: '(11) 98602-1032'
+  phone: '(61) 98602-1032'
 }
 
 // Métodos otimizados
