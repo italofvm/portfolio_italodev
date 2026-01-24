@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "title": "Menu principal",
+    "logo_label": "Italo Vieira - Página inicial",
+    "menu_label": "Menu",
+    "services": "Serviços",
+    "portfolio": "Portfólio",
+    "clients": "Clientes",
+    "faq": "FAQ",
+    "whatsapp": "FALAR NO WHATSAPP"
+  },
+  "seo": {
+    "title": "Italo Vieira | High-Performance Digital Architect & Developer",
+    "description": "Transformando negócios através de design radical e engenharia de software de alta performance. Especialista em Landing Pages e Sistemas Web escaláveis."
+  },
+  "hero": {
+    "badge": "Freelance Expert 2026",
+    "title_part1": "CRIANDO",
+    "title_highlight": "O FUTURO",
+    "title_part2": "DIGITAL.",
+    "subtitle": "Transformo negócios comuns em experiências digitais de alta performance com {strategy} e {aesthetic}.",
+    "strategy": "estratégia",
+    "aesthetic": "estética radical",
+    "cta_proposal": "SOLICITAR PROPOSTA",
+    "cta_projects": "VER PROJETOS"
+  },
+  "services": {
+    "badge": "Especialidades",
+    "title_part1": "COMO POSSO",
+    "title_highlight": "IMPULSIONAR",
+    "title_part2": "SEU NEGÓCIO.",
+    "description": "Focado em performance e design minimalista, entrego soluções que não apenas parecem bonitas, mas funcionam como máquinas de venda.",
+    "items": {
+      "landing_pages": {
+        "title": "Landing Pages",
+        "description": "Interfaces de alto impacto focadas em tração imediata e ROI."
+      },
+      "brand_experience": {
+        "title": "Brand Experience",
+        "description": "Sistemas de design que transformam sua identidade em presença digital."
+      },
+      "speed_seo": {
+        "title": "Speed & SEO",
+        "description": "Otimização radical para Google e carregamento instantâneo."
+      }
+    }
+  },
+  "portfolio": {
+    "badge": "Cases de Sucesso",
+    "title_part1": "ESTÉTICA EM",
+    "title_highlight": "MOVIMENTO",
+    "cta": "COMEÇAR MEU PROJETO",
+    "case_study": "Ver Estudo de Caso"
+  },
+  "testimonials": {
+    "badge": "Social Proof",
+    "title_part1": "O QUE MEUS",
+    "title_part2": "PARCEIROS",
+    "title_highlight": "DIZEM",
+    "marcos": {
+      "text": "Simplesmente incrível! A landing page da minha barbearia ficou pronta em 3 dias e já aumentou meus agendamentos.",
+      "role": "Barbearia Viking"
+    },
+    "ana": {
+      "text": "Entendeu exatamente o que eu precisava. O cardápio digital é rápido e meus clientes adoraram.",
+      "role": "The Grill"
+    },
+    "juliana": {
+      "text": "Profissionalismo nota 10. O site ficou elegante e superou minhas expectativas. Recomendo muito!",
+      "role": "Clínica Renovare"
+    }
+  },
+  "faq": {
+    "badge": "Transparência",
+    "title": "FAQ.",
+    "items": {
+      "q1": {
+        "question": "Quanto tempo leva para criar um site?",
+        "answer": "Uma Landing Page Simples geralmente fica pronta em 3 a 5 dias úteis. Projetos mais complexos podem levar de 10 a 15 dias."
+      },
+      "q2": {
+        "question": "O site funciona no celular?",
+        "answer": "Sim, 100% responsivo. Desenvolvo pensando primeiro na experiência mobile."
+      },
+      "q3": {
+        "question": "O site será meu?",
+        "answer": "Sim, o código e o domínio são 100% de sua propriedade. Sem taxas ocultas."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Contato",
+    "title_part1": "VAMOS",
+    "title_highlight": "CRIAR",
+    "title_part2": "ALGO REAL.",
+    "benefits": {
+      "agile": {
+        "title": "Entrega Ágil",
+        "desc": "Seu projeto no ar em menos de uma semana."
+      },
+      "sales": {
+        "title": "Foco em Vendas",
+        "desc": "Cada pixel é pensado para converter o lead."
+      }
+    }
+  },
+  "footer": {
+    "rights": "© 2026 Italo Vieira. Todos os direitos reservados.",
+    "built_with": "Desenvolvido com Nuxt 3 & Motion"
+  },
+  "whatsapp": {
+    "label": "DÚVIDAS? FALE COMIGO",
+    "offline": "OFFLINE"
+  },
+  "projects": {
+    "barber_simple": {
+      "title": "Barbearia Viking",
+      "description": "Sistema de agendamento simplificado com apresentação de serviços.",
+      "type": "Simples"
+    },
+    "barber_pro": {
+      "title": "Barbearia Elite",
+      "description": "Experiência premium com galeria interativa e fidelidade.",
+      "type": "Profissional"
+    },
+    "burger_simple": {
+      "title": "Burger Star",
+      "description": "Cardápio digital leve para carregamento instantâneo no 4G.",
+      "type": "Simples"
+    },
+    "burger_pro": {
+      "title": "The Grill",
+      "description": "Sistema completo com integração de pedidos via WhatsApp.",
+      "type": "Profissional"
+    },
+    "aesthetic_simple": {
+      "title": "Belleza Natural",
+      "description": "Landing page elegante focada em captura de leads (Botox).",
+      "type": "Simples"
+    },
+    "aesthetic_pro": {
+      "title": "Lumière Spa",
+      "description": "Portal completo com blog, antes/depois e agendamento.",
+      "type": "Profissional"
+    }
+  }
+}

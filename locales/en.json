@@ -1,0 +1,147 @@
+{
+  "nav": {
+    "title": "Main Menu",
+    "logo_label": "Italo Vieira - Home Page",
+    "menu_label": "Menu",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "clients": "Clients",
+    "faq": "FAQ",
+    "whatsapp": "TALK ON WHATSAPP"
+  },
+  "seo": {
+    "title": "Italo Vieira | High-Performance Digital Architect & Developer",
+    "description": "Transforming businesses through radical design and high-performance software engineering. Specialist in Landing Pages and scalable Web Systems."
+  },
+  "hero": {
+    "badge": "Freelance Expert 2026",
+    "title_part1": "CRAFTING",
+    "title_highlight": "THE DIGITAL",
+    "title_part2": "FUTURE.",
+    "subtitle": "I transform ordinary businesses into high-performance digital experiences with {strategy} and {aesthetic}.",
+    "strategy": "strategy",
+    "aesthetic": "radical aesthetics",
+    "cta_proposal": "REQUEST PROPOSAL",
+    "cta_projects": "SEE PROJECTS"
+  },
+  "services": {
+    "badge": "Specialties",
+    "title_part1": "HOW I CAN",
+    "title_highlight": "BOOST",
+    "title_part2": "YOUR BUSINESS.",
+    "description": "Focused on performance and minimalist design, I deliver solutions that don't just look good, but work as sales machines.",
+    "items": {
+      "landing_pages": {
+        "title": "Landing Pages",
+        "description": "High-impact interfaces focused on immediate traction and ROI."
+      },
+      "brand_experience": {
+        "title": "Brand Experience",
+        "description": "Design systems that transform your identity into digital presence."
+      },
+      "speed_seo": {
+        "title": "Speed & SEO",
+        "description": "Radical optimization for Google and instant loading."
+      }
+    }
+  },
+  "portfolio": {
+    "badge": "Success Cases",
+    "title_part1": "AESTHETICS IN",
+    "title_highlight": "MOTION",
+    "cta": "START MY PROJECT",
+    "case_study": "View Case Study"
+  },
+  "testimonials": {
+    "badge": "Social Proof",
+    "title_part1": "WHAT MY",
+    "title_part2": "PARTNERS",
+    "title_highlight": "SAY",
+    "marcos": {
+      "text": "Simply incredible! My barbershop landing page was ready in 3 days and already increased my bookings.",
+      "role": "Viking Barbershop"
+    },
+    "ana": {
+      "text": "Understood exactly what I needed. The digital menu is fast and my customers loved it.",
+      "role": "The Grill"
+    },
+    "juliana": {
+      "text": "10/10 Professionalism. The site turned out elegant and exceeded my expectations. Highly recommend!",
+      "role": "Renovare Clinic"
+    }
+  },
+  "faq": {
+    "badge": "Transparency",
+    "title": "FAQ.",
+    "items": {
+      "q1": {
+        "question": "How long does it take to create a site?",
+        "answer": "A Simple Landing Page is usually ready in 3 to 5 business days. More complex projects can take 10 to 15 days."
+      },
+      "q2": {
+        "question": "Does the site work on mobile?",
+        "answer": "Yes, 100% responsive. I develop thinking mobile-first experience."
+      },
+      "q3": {
+        "question": "Will the site be mine?",
+        "answer": "Yes, code and domain are 100% your property. No hidden fees."
+      }
+    }
+  },
+  "contact": {
+    "badge": "Contact",
+    "title_part1": "LET'S",
+    "title_highlight": "CREATE",
+    "title_part2": "SOMETHING REAL.",
+    "benefits": {
+      "agile": {
+        "title": "Agile Delivery",
+        "desc": "Your project live in less than a week."
+      },
+      "sales": {
+        "title": "Sales Focus",
+        "desc": "Each pixel is thought out to convert the lead."
+      }
+    }
+  },
+  "footer": {
+    "rights": "© 2026 Italo Vieira. All rights reserved.",
+    "built_with": "Built with Nuxt 3 & Motion"
+  },
+  "whatsapp": {
+    "label": "QUESTIONS? TALK TO ME",
+    "offline": "OFFLINE"
+  },
+  "projects": {
+    "barber_simple": {
+      "title": "Viking Barbershop",
+      "description": "Simplified booking system with service presentation.",
+      "type": "Simple"
+    },
+    "barber_pro": {
+      "title": "Elite Barbershop",
+      "description": "Premium experience with interactive gallery and loyalty.",
+      "type": "Professional"
+    },
+    "burger_simple": {
+      "title": "Burger Star",
+      "description": "Lightweight digital menu for instant loading on 4G.",
+      "type": "Simple"
+    },
+    "burger_pro": {
+      "title": "The Grill",
+      "description": "Complete system with WhatsApp order integration.",
+      "type": "Professional"
+    },
+    "aesthetic_simple": {
+      "title": "Natural Beauty",
+      "description": "Elegant landing page focused on lead capture (Botox).",
+      "type": "Simple"
+    },
+    "aesthetic_pro": {
+      "title": "Lumière Spa",
+      "description": "Complete portal with blog, before/after and scheduling.",
+      "type": "Professional"
+    }
+  }
+}

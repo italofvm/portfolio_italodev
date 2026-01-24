@@ -22,14 +22,13 @@
         <!-- Asymmetric Tension Layout -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           
-          <div class="lg:col-span-8">
             <div class="hero-badge-container mb-8 overflow-hidden">
               <span 
                 ref="badge"
                 class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-brand/10 border border-brand/20 text-brand font-bold text-xs uppercase tracking-[0.2em]"
               >
                 <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
-                Freelance Expert 2026
+                {{ $t('hero.badge') }}
               </span>
             </div>
             
@@ -37,10 +36,10 @@
               ref="title"
               class="text-6xl md:text-8xl lg:text-[120px] font-black text-white leading-[0.9] tracking-tighter mb-8"
             >
-              <span class="sr-only">Italo Vieira | Desenvolvedor Web Freelancer & Designer UI/UX</span>
-              CRIANDO <br/>
-              <span class="text-brand">O FUTURO</span> <br/>
-              DIGITAL.
+              <span class="sr-only">Italo Vieira | {{ $t('nav.title') }}</span>
+              {{ $t('hero.title_part1') }} <br/>
+              <span class="text-brand">{{ $t('hero.title_highlight') }}</span> <br/>
+              {{ $t('hero.title_part2') }}
             </h1>
           </div>
 
@@ -49,7 +48,7 @@
               ref="subtitle"
               class="text-xl text-gray-400 font-medium leading-relaxed mb-10 border-l-2 border-brand/30 pl-6"
             >
-              Transformo negócios comuns em experiências digitais de alta performance com <span class="text-white">estratégia</span> e <span class="text-white">estética radical</span>.
+              <span v-html="$t('hero.subtitle', { strategy: `<span class='text-white'>${$t('hero.strategy')}</span>`, aesthetic: `<span class='text-white'>${$t('hero.aesthetic')}</span>` })"></span>
             </p>
             
             <div ref="ctas" class="flex flex-col sm:flex-row items-stretch gap-4 opacity-0">
@@ -57,7 +56,7 @@
                 href="#contato" 
                 class="group relative px-8 py-5 bg-brand text-white font-black rounded-hyper overflow-hidden transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_20px_40px_-15px_rgba(255,92,0,0.5)] flex items-center justify-center gap-3"
               >
-                <span class="relative z-10">SOLICITAR PROPOSTA</span>
+                <span class="relative z-10">{{ $t('hero.cta_proposal') }}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
@@ -68,7 +67,7 @@
                 href="#portfolio" 
                 class="px-8 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-hyper hover:bg-white/10 transition-all duration-300 text-center"
               >
-                VER PROJETOS
+                {{ $t('hero.cta_projects') }}
               </a>
             </div>
           </div>

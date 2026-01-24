@@ -3,7 +3,24 @@ export default defineNuxtConfig({
     compatibilityDate: '2024-04-03',
     devtools: { enabled: true },
 
-    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap'],
+    modules: ['@nuxtjs/tailwindcss', '@nuxtjs/sitemap', '@nuxtjs/i18n'],
+
+    i18n: {
+        locales: [
+            { code: 'pt', name: 'Português', iso: 'pt-BR', file: 'pt.json' },
+            { code: 'en', name: 'English', iso: 'en-US', file: 'en.json' }
+        ],
+        defaultLocale: 'pt',
+        strategy: 'prefix_except_default',
+        detectBrowserLanguage: {
+            useCookie: true,
+            cookieKey: 'i18n_redirected',
+            alwaysRedirect: true,
+            fallbackLocale: 'pt'
+        },
+        lazy: true,
+        langDir: 'locales/'
+    },
 
     css: [
         '~/assets/css/optimized-animations.css'

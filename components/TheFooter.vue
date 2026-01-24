@@ -7,18 +7,18 @@
         </div>
         
         <div class="flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">
-          <a href="#servicos" class="hover:text-brand transition-colors">Serviços</a>
-          <a href="#portfolio" class="hover:text-brand transition-colors">Portfólio</a>
-          <a href="#contato" class="hover:text-brand transition-colors">Contato</a>
+          <a href="#servicos" class="hover:text-brand transition-colors">{{ $t('nav.services') }}</a>
+          <a href="#portfolio" class="hover:text-brand transition-colors">{{ $t('nav.portfolio') }}</a>
+          <a href="#contato" class="hover:text-brand transition-colors">{{ $t('nav.badge') || 'CONTATO' }}</a>
         </div>
       </div>
       
       <div class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4">
         <p class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">
-          © {{ new Date().getFullYear() }} <span class="text-white">ITALO VIEIRA</span>. ALL RIGHTS RESERVED.
+          {{ $t('footer.rights') }}
         </p>
         <p class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">
-          BUILT BY <span class="text-brand">HIGH-PERFORMANCE ARCHITECT</span>
+          {{ $t('footer.built_with') }}
         </p>
       </div>
     </div>

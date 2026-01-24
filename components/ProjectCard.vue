@@ -58,7 +58,7 @@
       </p>
       
       <div class="flex items-center text-white text-xs font-black uppercase tracking-widest mt-auto group/link">
-        <span class="mr-2">Ver Estudo de Caso</span>
+        <span class="mr-2">{{ $t('portfolio.case_study') }}</span>
         <div class="w-8 h-[2px] bg-brand transform origin-left transition-transform duration-300 group-hover/link:scale-x-150"></div>
       </div>
     </div>
