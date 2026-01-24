@@ -1,39 +1,6 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="512" height="512" rx="80" fill="#090040"/>
-  
-  <!-- Glow effect -->
-  <defs>
-    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#B13BFF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#471396;stop-opacity:1" />
-    </linearGradient>
-    
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
-  
-  <!-- Letter "I" with modern geometric design -->
-  <g filter="url(#glow)">
-    <!-- Top cap -->
-    <rect x="180" y="120" width="152" height="40" rx="20" fill="url(#gradient1)"/>
-    
-    <!-- Vertical bar -->
-    <rect x="216" y="140" width="80" height="232" rx="8" fill="url(#gradient1)"/>
-    
-    <!-- Bottom cap -->
-    <rect x="180" y="352" width="152" height="40" rx="20" fill="url(#gradient1)"/>
-    
-    <!-- Accent dot (golden detail) -->
-    <circle cx="256" cy="140" r="12" fill="#FFCC00" opacity="0.9"/>
-  </g>
-  
-  <!-- Subtle geometric accent lines -->
-  <line x1="140" y1="256" x2="160" y2="256" stroke="#B13BFF" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
-  <line x1="352" y1="256" x2="372" y2="256" stroke="#B13BFF" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <rect width="32" height="32" fill="#050505"/>
+  <path d="M6 8L10 12V24L6 20V8Z" fill="#FF5C00"/>
+  <path d="M14 12L18 16L28 6V10L18 20L14 16V12Z" fill="#FF5C00"/>
+  <path d="M18 24L28 14V18L22 24H18Z" fill="#FF5C00"/>
 </svg>

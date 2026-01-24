@@ -1,95 +1,131 @@
 <template>
-  <section class="relative bg-primary-dark pt-32 pb-20 overflow-hidden">
-    <!-- Background glow -->
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
-      <div class="absolute top-20 left-10 w-72 h-72 bg-accent/30 rounded-full blur-3xl mix-blend-screen animate-pulse"></div>
-      <div class="absolute top-40 right-10 w-96 h-96 bg-highlight/20 rounded-full blur-3xl mix-blend-screen"></div>
+  <section class="relative min-h-screen flex items-center bg-primary-dark pt-32 pb-20 overflow-hidden">
+    <!-- Kinetic Background elements -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <!-- Massive Background Text -->
+      <div 
+        ref="bgText"
+        class="absolute -top-10 -left-20 text-[20vw] font-black text-white/[0.02] select-none leading-none tracking-tighter"
+        aria-hidden="true"
+      >
+        DESIGN
+      </div>
+      <!-- Signal Glow -->
+      <div 
+        ref="glow"
+        class="absolute top-[20%] -right-[10%] w-[60vw] h-[60vw] bg-brand/10 rounded-full blur-[120px]"
+      ></div>
     </div>
 
-    <div class="container mx-auto px-4 relative z-10 text-center">
-      <span class="hero-badge inline-block px-4 py-2 rounded-full bg-white/10 border border-white/20 text-cta font-medium text-sm mb-6 backdrop-blur-sm">
-        🚀 Desenvolvedor Freelancer Especialista
-      </span>
-      
-      <h1 class="hero-title text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-gray-400 mb-6 tracking-tight leading-tight">
-        Transformo Ideias em <br class="hidden md:block"/>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-highlight to-accent">Sites de Alta Conversão</span>
-      </h1>
-      
-      <p class="hero-subtitle text-xl text-gray-200 max-w-2xl mx-auto mb-10 leading-relaxed">
-        Criação de Landing Pages, Portfólios e Sistemas Web rápidos, modernos e otimizados para vender mais.
-      </p>
-      
-      <div class="hero-buttons flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#contato" class="cta-button px-8 py-4 bg-cta text-primary-dark font-bold rounded-lg shadow-[0_0_20px_rgba(255,204,0,0.3)] w-full sm:w-auto">
-          Solicitar Orçamento
-        </a>
-        <a href="#portfolio" class="cta-button-secondary px-8 py-4 bg-transparent border border-white/20 text-white font-medium rounded-lg w-full sm:w-auto">
-          Ver Projetos
-        </a>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-[1200px] mx-auto">
+        <!-- Asymmetric Tension Layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+          
+          <div class="lg:col-span-8">
+            <div class="hero-badge-container mb-8 overflow-hidden">
+              <span 
+                ref="badge"
+                class="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-brand/10 border border-brand/20 text-brand font-bold text-xs uppercase tracking-[0.2em]"
+              >
+                <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+                Freelance Expert 2026
+              </span>
+            </div>
+            
+            <h1 
+              ref="title"
+              class="text-6xl md:text-8xl lg:text-[120px] font-black text-white leading-[0.9] tracking-tighter mb-8"
+            >
+              <span class="sr-only">Italo Vieira | Desenvolvedor Web Freelancer & Designer UI/UX</span>
+              CRIANDO <br/>
+              <span class="text-brand">O FUTURO</span> <br/>
+              DIGITAL.
+            </h1>
+          </div>
+
+          <div class="lg:col-span-4 lg:mb-12">
+            <p 
+              ref="subtitle"
+              class="text-xl text-gray-400 font-medium leading-relaxed mb-10 border-l-2 border-brand/30 pl-6"
+            >
+              Transformo negócios comuns em experiências digitais de alta performance com <span class="text-white">estratégia</span> e <span class="text-white">estética radical</span>.
+            </p>
+            
+            <div ref="ctas" class="flex flex-col sm:flex-row items-stretch gap-4 opacity-0">
+              <a 
+                href="#contato" 
+                class="group relative px-8 py-5 bg-brand text-white font-black rounded-hyper overflow-hidden transition-all duration-500 hover:scale-[1.05] hover:shadow-[0_20px_40px_-15px_rgba(255,92,0,0.5)] flex items-center justify-center gap-3"
+              >
+                <span class="relative z-10">SOLICITAR PROPOSTA</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 relative z-10 transform group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+                <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+              </a>
+              
+              <a 
+                href="#portfolio" 
+                class="px-8 py-5 bg-white/5 border border-white/10 text-white font-bold rounded-hyper hover:bg-white/10 transition-all duration-300 text-center"
+              >
+                VER PROJETOS
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Horizontal Scroll Narrative (Fragment) -->
+        <div 
+          ref="narrative"
+          class="mt-24 pt-12 border-t border-white/5 flex flex-wrap gap-12 text-gray-500 font-bold text-xs tracking-widest uppercase opacity-0"
+        >
+          <div class="flex items-center gap-2 grayscale brightness-50 hover:grayscale-0 hover:brightness-100 transition-all cursor-default">
+            <span>#HIGH_PERFORMANCE</span>
+          </div>
+          <div class="flex items-center gap-2 grayscale brightness-50 hover:grayscale-0 hover:brightness-100 transition-all cursor-default">
+            <span>#USER_CENTRIC</span>
+          </div>
+          <div class="flex items-center gap-2 grayscale brightness-50 hover:grayscale-0 hover:brightness-100 transition-all cursor-default">
+            <span>#KINETIC_FLOW</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, ref } from 'vue'
+import { animate } from 'motion'
 
-// Animações desabilitadas temporariamente
-// onMounted(() => {
-//   if (typeof window !== 'undefined') {
-//     const { initHeroAnimations } = useAnimations()
-//     initHeroAnimations()
-//   }
-// })
+const bgText = ref(null)
+const glow = ref(null)
+const badge = ref(null)
+const title = ref(null)
+const subtitle = ref(null)
+const ctas = ref(null)
+const narrative = ref(null)
+
+onMounted(() => {
+  // Kinetic Background Entrances
+  animate(bgText.value, { opacity: [0, 0.02], x: [-100, 0] }, { duration: 2, easing: [0.16, 1, 0.3, 1] })
+  animate(glow.value, { opacity: [0, 1], scale: [0.8, 1] }, { duration: 3, delay: 0.5 })
+
+  // Sequential Stagger Reveal
+  const springOptions = { duration: 0.8, easing: [0.16, 1, 0.3, 1] }
+  
+  animate(badge.value, { opacity: [0, 1], y: [20, 0] }, springOptions)
+  animate(title.value, { opacity: [0, 1], y: [40, 0] }, { ...springOptions, delay: 0.2 })
+  animate(subtitle.value, { opacity: [0, 1], x: [-20, 0] }, { ...springOptions, delay: 0.4 })
+  animate(ctas.value, { opacity: [0, 1], y: [20, 0] }, { ...springOptions, delay: 0.6 })
+  animate(narrative.value, { opacity: [0, 1] }, { duration: 1, delay: 1 })
+})
 </script>
 
 <style scoped>
-/* Garantir visibilidade */
-.hero-badge,
-.hero-title,
-.hero-subtitle,
-.hero-buttons {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.hero-badge { animation-delay: 0.1s; }
-.hero-title { animation-delay: 0.2s; }
-.hero-subtitle { animation-delay: 0.4s; }
-.hero-buttons { animation-delay: 0.6s; }
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.cta-button {
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cta-button:hover {
-  transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 0 30px rgba(255, 204, 0, 0.5);
-  background: #ffd700;
-}
-
-.cta-button:active {
-  transform: translateY(0) scale(0.98);
-}
-
-.cta-button-secondary {
-  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cta-button-secondary:hover {
-  transform: translateY(-2px) scale(1.02);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 204, 0, 0.5);
+::selection {
+  background: theme('colors.brand');
+  color: white;
 }
 </style>

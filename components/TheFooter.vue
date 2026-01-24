@@ -1,16 +1,27 @@
 <template>
-  <footer class="bg-primary-dark border-t border-white/10 py-8 mt-20">
-    <div class="footer-content container mx-auto px-4 text-center">
-      <p class="text-gray-400 mb-2">
-        © {{ new Date().getFullYear() }} Italo Vieira. Todos os direitos reservados.
-      </p>
-      <div class="flex justify-center space-x-4">
-        <!-- Social links placeholder -->
-        <!-- <a href="#" class="text-white hover:text-highlight">LinkedIn</a> -->
+  <footer class="bg-primary-dark pt-32 pb-16 border-t border-white/5">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-white text-2xl font-black tracking-tighter">
+          ITALO <span class="text-brand">VIEIRA</span>
+        </div>
+        
+        <div class="flex gap-8 text-[10px] font-black uppercase tracking-[0.2em] text-gray-500">
+          <a href="#servicos" class="hover:text-brand transition-colors">Serviços</a>
+          <a href="#portfolio" class="hover:text-brand transition-colors">Portfólio</a>
+          <a href="#contato" class="hover:text-brand transition-colors">Contato</a>
+        </div>
       </div>
-      <p class="text-sm text-gray-600 mt-4">
-        Desenvolvido por italo vieira.
-      </p>
+      
+      <div class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4">
+        <p class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">
+          © {{ new Date().getFullYear() }} <span class="text-white">ITALO VIEIRA</span>. ALL RIGHTS RESERVED.
+        </p>
+        <p class="text-[10px] font-bold text-gray-600 uppercase tracking-widest">
+          BUILT BY <span class="text-brand">HIGH-PERFORMANCE ARCHITECT</span>
+        </p>
+      </div>
     </div>
   </footer>
 </template>
+
