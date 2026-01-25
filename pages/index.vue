@@ -5,7 +5,7 @@
       role="navigation"
       :aria-label="$t('nav.title')"
       class="fixed font-sans top-0 w-full z-50 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-      :class="scrolled ? 'bg-primary-dark/80 backdrop-blur-2xl border-b border-white/5 py-4' : 'bg-transparent py-8'"
+      :class="scrolled ? 'bg-primary-dark/80 backdrop-blur-2xl border-b border-white/5 py-4' : 'bg-transparent py-4 md:py-8'"
     >
       <div class="container mx-auto px-6 flex justify-between items-center">
         <a 
@@ -17,7 +17,6 @@
           @mousemove="handleMagneticLogo"
           @mouseleave="resetMagneticLogo"
         >
-          <span class="w-8 h-8 rounded-full bg-brand flex items-center justify-center text-white text-xs transform group-hover:rotate-[360deg] transition-transform duration-700">IV</span>
           <span>ITALO <span class="text-brand">VIEIRA</span></span>
         </a>
         
@@ -114,9 +113,9 @@
       <Hero />
 
       <!-- Services Section -->
-      <section id="servicos" class="py-32 bg-primary-dark relative overflow-hidden" aria-labelledby="services-heading">
+      <section id="servicos" class="py-10 md:py-24 lg:py-32 bg-primary-dark relative overflow-hidden" aria-labelledby="services-heading">
         <div class="container mx-auto px-6">
-          <div class="section-reveal grid grid-cols-1 lg:grid-cols-12 gap-12 mb-20 items-end opacity-0">
+          <div class="section-reveal grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 mb-8 md:mb-20 items-end opacity-0">
             <div class="lg:col-span-6">
               <span class="text-brand font-black text-xs uppercase tracking-[0.3em] mb-4 block">{{ $t('services.badge') }}</span>
               <h2 id="services-heading" class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
@@ -149,9 +148,9 @@
       </section>
 
       <!-- Portfolio Section -->
-      <section id="portfolio" class="py-32 bg-[#080808] border-y border-white/5" aria-labelledby="portfolio-heading">
+      <section id="portfolio" class="py-10 md:py-24 lg:py-32 bg-[#080808] border-y border-white/5" aria-labelledby="portfolio-heading">
         <div class="container mx-auto px-6">
-          <div class="section-reveal flex flex-col md:flex-row justify-between items-end mb-24 gap-8 opacity-0">
+          <div class="section-reveal flex flex-col md:flex-row justify-between items-end mb-8 md:mb-24 gap-4 md:gap-8 opacity-0">
             <div class="max-w-2xl">
               <span class="text-brand font-black text-xs uppercase tracking-[0.3em] mb-4 block">{{ $t('portfolio.badge') }}</span>
               <h2 id="portfolio-heading" class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-none">
@@ -181,9 +180,9 @@
       </section>
 
       <!-- Testimonials Section -->
-      <section id="depoimentos" class="py-32 bg-primary-dark" aria-labelledby="testimonials-heading">
+      <section id="depoimentos" class="py-10 md:py-24 lg:py-32 bg-primary-dark" aria-labelledby="testimonials-heading">
         <div class="container mx-auto px-6">
-          <div class="section-reveal max-w-3xl mb-24 opacity-0">
+          <div class="section-reveal max-w-3xl mb-8 md:mb-24 opacity-0">
             <span class="text-brand font-black text-xs uppercase tracking-[0.3em] mb-4 block">{{ $t('testimonials.badge') }}</span>
             <h2 id="testimonials-heading" class="text-5xl md:text-6xl font-black text-white tracking-tighter leading-[0.9]">
               {{ $t('testimonials.title_part1') }} <br/> {{ $t('testimonials.title_part2') }} <span class="text-brand">{{ $t('testimonials.title_highlight') }}</span>.
@@ -204,9 +203,9 @@
       </section>
 
       <!-- FAQ Section -->
-      <section id="faq" class="py-32 bg-[#080808] border-t border-white/5" aria-labelledby="faq-heading">
+      <section id="faq" class="py-10 md:py-24 lg:py-32 bg-[#080808] border-t border-white/5" aria-labelledby="faq-heading">
         <div class="container mx-auto px-6 max-w-4xl">
-          <div class="section-reveal text-center mb-24 opacity-0">
+          <div class="section-reveal text-center mb-10 md:mb-24 opacity-0">
             <span class="text-brand font-black text-xs uppercase tracking-[0.3em] mb-4 block">{{ $t('faq.badge') }}</span>
             <h2 id="faq-heading" class="text-5xl md:text-6xl font-black text-white tracking-tighter">{{ $t('faq.title') }}</h2>
           </div>
@@ -223,7 +222,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section id="contato" class="py-32 bg-primary-dark relative overflow-hidden" aria-labelledby="contact-heading">
+      <section id="contato" class="py-12 sm:py-20 md:py-28 lg:py-32 bg-primary-dark relative overflow-hidden" aria-labelledby="contact-heading">
         <div class="absolute -bottom-24 -left-24 w-[50vw] h-[50vw] bg-brand/5 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div class="container mx-auto px-6">
@@ -234,16 +233,16 @@
                 {{ $t('contact.title_part1') }} <br/> <span class="text-brand">{{ $t('contact.title_highlight') }}</span> <br/> {{ $t('contact.title_part2') }}
               </h2>
               
-              <div class="space-y-6 pt-10 border-t border-white/5 max-w-lg">
-                <div v-for="benefit in translatedContactBenefits" :key="benefit.title" class="flex gap-6 group">
-                  <div class="w-12 h-12 rounded-modern bg-brand/10 flex items-center justify-center text-brand group-hover:bg-brand group-hover:text-white transition-all duration-500 flex-shrink-0">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div class="space-y-4 md:space-y-6 pt-6 md:pt-10 border-t border-white/5 max-w-lg">
+                <div v-for="benefit in translatedContactBenefits" :key="benefit.title" class="flex gap-4 md:gap-6 group">
+                  <div class="w-10 h-10 md:w-12 md:h-12 rounded-modern bg-brand/10 flex items-center justify-center text-brand group-hover:bg-brand group-hover:text-white transition-all duration-500 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 md:w-6 md:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" :d="benefit.icon" />
                     </svg>
                   </div>
                   <div>
-                    <h4 class="text-lg font-black text-white mb-1 tracking-tight">{{ benefit.title }}</h4>
-                    <p class="text-gray-500 font-medium text-sm leading-relaxed">{{ benefit.desc }}</p>
+                    <h4 class="text-base md:text-lg font-black text-white mb-1 tracking-tight">{{ benefit.title }}</h4>
+                    <p class="text-gray-500 font-medium text-xs md:text-sm leading-relaxed">{{ benefit.desc }}</p>
                   </div>
                 </div>
               </div>
@@ -283,12 +282,17 @@ const modalOpen = ref(false)
 const selectedProject = ref(null)
 const logoLink = ref(null)
 
+let magneticAnimationFrame
 const handleMagneticLogo = (e) => {
-  const { currentTarget: target, clientX, clientY } = e
-  const { left, top, width, height } = target.getBoundingClientRect()
-  const x = clientX - (left + width / 2)
-  const y = clientY - (top + height / 2)
-  animate(target, { x: x * 0.3, y: y * 0.3 }, { easing: spring({ stiffness: 200, damping: 20 }) })
+  if (!process.client || magneticAnimationFrame) return
+  magneticAnimationFrame = requestAnimationFrame(() => {
+    const { currentTarget: target, clientX, clientY } = e
+    const { left, top, width, height } = target.getBoundingClientRect()
+    const x = clientX - (left + width / 2)
+    const y = clientY - (top + height / 2)
+    animate(target, { x: x * 0.3, y: y * 0.3 }, { easing: spring({ stiffness: 200, damping: 20 }) })
+    magneticAnimationFrame = null
+  })
 }
 
 const resetMagneticLogo = () => {
@@ -323,15 +327,12 @@ const translatedServices = computed(() => services.map(s => ({
   description: t(`services.items.${s.key}.description`)
 })))
 
-const translatedProjects = computed(() => projects.map(p => {
-  const key = p.image.replace(/-/g, '_')
-  return {
-    ...p,
-    title: t(`projects.${key}.title`),
-    description: t(`projects.${key}.description`),
-    type: t(`projects.${key}.type`)
-  }
-}))
+const translatedProjects = computed(() => projects.map(p => ({
+  ...p,
+  title: t(`projects.${p.id}.title`),
+  description: t(`projects.${p.id}.description`),
+  type: t(`projects.${p.id}.type`)
+})))
 
 const testimonialsData = [
   { key: 'marcos', author: 'Marcos Silva', roleKey: 'barbearia' },

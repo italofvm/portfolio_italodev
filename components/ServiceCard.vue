@@ -1,5 +1,5 @@
 <template>
-  <div class="service-card group p-10 rounded-hyper bg-surface border border-white/5 hover:border-brand/40 transition-all duration-500 relative overflow-hidden h-full">
+  <div class="service-card group p-6 md:p-8 lg:p-10 rounded-hyper bg-surface border border-white/5 hover:border-brand/40 transition-all duration-500 relative overflow-hidden h-full">
     <!-- Corner Signal -->
     <div class="absolute top-0 right-0 w-24 h-24 bg-brand/5 rounded-bl-full translate-x-12 -translate-y-12 group-hover:scale-150 transition-transform duration-700"></div>
 

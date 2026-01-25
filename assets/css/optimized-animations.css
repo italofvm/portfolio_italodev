@@ -17,6 +17,11 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  
+  /* Reduzir efeitos visuais pesados */
+  .glow-effect {
+    opacity: 0 !important;
+  }
 }
 
 /* Animação de entrada suave - Única e reutilizável */
@@ -31,9 +36,9 @@
   }
 }
 
-/* Transições suaves para interações */
+/* Transições suaves para interações - Apenas propriedades GPU */
 a, button {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 /* Hover effects otimizados - Usar transform ao invés de margin/padding */
@@ -43,6 +48,7 @@ a, button {
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
               box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
               border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  contain: layout style paint;
 }
 
 /* Animação de pulso suave para CTAs */
@@ -100,9 +106,9 @@ a, button {
   transform: translateY(-10px);
 }
 
-/* Animação de fade in com delay */
+/* Animação de fade in com delay - otimizado */
 .animate-fade-in {
-  animation: fadeInUp 1s ease-out 2s forwards;
+  animation: fadeInUp 0.6s ease-out 1s forwards;
   opacity: 0;
 }
 
@@ -113,4 +119,24 @@ a, button {
   .testimonial-card:hover {
     will-change: transform;
   }
+}
+
+/* Otimização Mobile */
+@media (max-width: 768px) {
+  /* Simplificar transições */
+  .service-card,
+  .project-card,
+  .testimonial-card {
+    transition-duration: 0.2s;
+  }
+  
+  /* Desabilitar hover effects pesados */
+  .project-card:hover {
+    transform: none;
+  }
+}
+
+/* Otimização de contenção para seções */
+section {
+  contain: layout style;
 }

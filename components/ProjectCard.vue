@@ -26,6 +26,7 @@
           :src="`/assets/optimized/${project.image}.webp`"
           :alt="`Projeto ${project.title} - ${project.type}`" 
           loading="lazy"
+          decoding="async"
           width="640"
           height="400"
           class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700 ease-out"
@@ -49,7 +50,7 @@
       </div>
     </div>
     
-    <div class="p-8 flex-grow flex flex-col relative z-10">
+    <div class="p-6 md:p-8 flex-grow flex flex-col relative z-10">
       <h3 class="text-2xl font-black text-white mb-3 group-hover:text-brand transition-colors duration-300 tracking-tight">
         {{ project.title }}
       </h3>

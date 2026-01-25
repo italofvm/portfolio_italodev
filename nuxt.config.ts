@@ -46,12 +46,12 @@ export default defineNuxtConfig({
             htmlAttrs: {
                 lang: 'pt-BR'
             },
-            title: 'Italo Vieira | High-Performance Digital Architect & Developer',
+            title: 'Italo Vieira | Desenvolvedor Web Freelancer & Designer UI/UX',
             meta: [
                 { charset: 'utf-8' },
                 { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-                { name: 'description', content: '🚀 Projetando o futuro digital com estética radical e alta performance. Especialista em Landing Pages, UI/UX e desenvolvimento web focado em conversão extrema.' },
-                { name: 'keywords', content: 'desenvolvedor web, high performance architect, landing page, criação de sites, desenvolvedor freelancer, UI/UX designer, SEO, Nuxt 3, Vue.js, digital design' },
+                { name: 'description', content: 'Desenvolvedor Web especialista em Landing Pages de alta conversão e design UI/UX. Crio sites rápidos, modernos e focados em resultados para seu negócio.' },
+                { name: 'keywords', content: 'desenvolvedor web, landing page, criação de sites, desenvolvedor freelancer, UI/UX designer, SEO, sites para empresas, web design' },
                 { name: 'author', content: 'Italo Vieira' },
                 { name: 'theme-color', content: '#050505' },
                 { name: 'format-detection', content: 'telephone=no' },
@@ -59,16 +59,20 @@ export default defineNuxtConfig({
                 
                 // Open Graph / Facebook
                 { property: 'og:type', content: 'website' },
+                { property: 'og:site_name', content: 'Italo Vieira - Web Developer' },
                 { property: 'og:url', content: 'https://italovdev.vercel.app/' },
-                { property: 'og:title', content: 'Italo Vieira | High-Performance Digital Architect' },
-                { property: 'og:description', content: 'Design radical e performance extrema para negócios que buscam o topo do digital.' },
+                { property: 'og:title', content: 'Italo Vieira | Desenvolvedor Web & Designer UI/UX' },
+                { property: 'og:description', content: 'Crio landing pages de alta conversão e sites modernos. Especialista em performance e design focado em resultados.' },
                 { property: 'og:image', content: 'https://italovdev.vercel.app/og-image.jpg' },
+                { property: 'og:image:width', content: '1200' },
+                { property: 'og:image:height', content: '630' },
                 { property: 'og:locale', content: 'pt_BR' },
                 
                 // Twitter Card
                 { name: 'twitter:card', content: 'summary_large_image' },
-                { name: 'twitter:title', content: 'Italo Vieira | High-Performance Design' },
-                { name: 'twitter:description', content: 'Projetando o futuro digital com estética radical e alta performance.' },
+                { name: 'twitter:title', content: 'Italo Vieira | Desenvolvedor Web & Designer UI/UX' },
+                { name: 'twitter:description', content: 'Landing pages de alta conversão e sites modernos focados em resultados.' },
+                { name: 'twitter:image', content: 'https://italovdev.vercel.app/og-image.jpg' },
             ],
             link: [
                 { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },

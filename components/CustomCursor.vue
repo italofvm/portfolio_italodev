@@ -1,15 +1,17 @@
 <template>
   <div class="hidden lg:block pointer-events-none fixed inset-0 z-[10000]">
-    <!-- Main Dot -->
+    <!-- Main Dot (Hardware Accelerated) -->
     <div 
       ref="cursorDot"
-      class="fixed w-2 h-2 bg-brand rounded-full transform -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300"
+      class="fixed w-2 h-2 bg-brand rounded-full transition-opacity duration-300 pointer-events-none will-change-transform -translate-x-1/2 -translate-y-1/2"
+      style="top: 0; left: 0;"
     ></div>
     
-    <!-- Outer Ring -->
+    <!-- Outer Ring (GPU Optimized) -->
     <div 
       ref="cursorRing"
-      class="fixed w-12 h-12 border-2 border-brand/40 rounded-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      class="fixed w-12 h-12 border-2 border-brand/40 rounded-full pointer-events-none will-change-transform -translate-x-1/2 -translate-y-1/2"
+      style="top: 0; left: 0;"
     ></div>
   </div>
 </template>
@@ -25,17 +27,16 @@ const isHovering = ref(false)
 const updateMousePos = (e) => {
   const { clientX: x, clientY: y, target } = e
   
-  // Mover ponto central (instantâneo)
+  // Mover ponto central (instântaneo via translate3d para GPU)
   if (cursorDot.value) {
-    cursorDot.value.style.left = `${x}px`
-    cursorDot.value.style.top = `${y}px`
+    cursorDot.value.style.transform = `translate3d(${x}px, ${y}px, 0)`
   }
 
-  // Mover anel externo (mola)
+  // Mover anel externo (mola via animate)
   if (cursorRing.value) {
     animate(cursorRing.value, { 
-      left: x, 
-      top: y 
+      x: x, 
+      y: y 
     }, { 
       easing: spring({ stiffness: 250, damping: 25, mass: 0.5 }) 
     })
